@@ -13,7 +13,6 @@ body {
 }
 
 nav {
-    background-color: #333;
     color: white;
 }
 
@@ -71,4 +70,281 @@ body.side-nav-body {
 body.side-nav-body #content {
     margin-left: 200px;
     width: calc(100% - 200px);
+}
+
+.nasdaq-header {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+li > .logo{
+    margin-top: 5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 10px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #0679a1;
+    font-weight: bold;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.search img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #8925B3 0%, #2B77D1 100%);
+    color: white;
+    padding: 20px;
+    width: 600px;
+    height: 200px;
+}
+
+.banner-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner-content p {
+    margin: 5px 0;
+}
+
+.subscribe-btn {
+    background-color: #009fe3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.banner-logo img {
+    height: 50px;
+}
+
+.banner-logo{
+    
+    margin: 15px 0;
+}
+.banner{
+    margin: 10px 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px 20px;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #178ff5;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    background-color: #178ff5;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #0e72d1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a2e;
+    color: white;
+    /* padding: 20px; */
+}
+
+.stock-info, .prev-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    padding: 20px;
+}
+
+.stock-info h1, .prev-info h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.stock-info p, .prev-info p {
+    margin: 5px 0;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.financials {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+.financials h2 {
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background-color: #575757;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr.highlight {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.left-nav {
+    width: 200px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    /* position: fixed; */
+    /* top: 100px;  */
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.left-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav ul li {
+    margin-bottom: 5px;
+}
+
+.left-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.left-nav ul li a:hover {
+    background-color: #1a1a2e;
+    color: white;
 }
