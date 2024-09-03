@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar top-nav">
+        <ul>
+            <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#" onclick="loadPage('about')">About</a></li>
+            <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <h1>Welcome to our A/B Testing Website</h1>
+        <p>This is the main content area. The navbar position changes based on the A/B test group.</p>
+        <button class="cta-button" onclick="trackCTA('main-cta')">Main CTA</button>
+        <div id="page-content"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
