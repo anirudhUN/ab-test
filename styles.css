@@ -132,7 +132,7 @@ li > .logo{
     align-items: center;
     background: linear-gradient(90deg, #8925B3 0%, #2B77D1 100%);
     color: white;
-    padding: 20px;
+    /* padding: 20px; */
     width: 600px;
     height: 200px;
 }
