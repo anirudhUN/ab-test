@@ -78,9 +78,22 @@
 function loadBannerImage(id = 1) {
     const imageUrl = `https://picsum.photos/id/${id}/600/200`;
 
-    // Assuming your banner image has an id of "banner-image"
     const bannerImageElement = document.getElementById('banner-image');
+    const loaderElement = document.getElementById('loader');
+
+    // Show the loader and hide the image initially
+    bannerImageElement.style.display = 'none';
+    loaderElement.style.display = 'block';
+
+    // Set the image source
     bannerImageElement.src = imageUrl;
+
+    // Once the image is loaded, hide the loader and show the image
+    bannerImageElement.onload = function() {
+        loaderElement.style.display = 'none';
+        bannerImageElement.style.display = 'block';
+    };
+
 }
 
 loadBannerImage()
