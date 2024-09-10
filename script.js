@@ -75,6 +75,17 @@
 // loadPage('home');
 
 // Function to fetch and display the image
+// Add this new script to prevent default behavior on nav links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a, .left-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Link clicked:', this.textContent);
+            // You can add any desired behavior here
+        });
+    });
+});
 function loadBannerImage(id = 1) {
     const imageUrl = `https://picsum.photos/id/${id}/600/200`;
 
