@@ -76,33 +76,33 @@
 
 // Function to fetch and display the image
    // Updated script to allow VWO tracking while preventing page reloads and infinite loops
-   document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a, .left-nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Check if this is our simulated event
-            if (e.isTrusted === false) {
-                return; // Exit the function to prevent infinite loop
-            }
+//    document.addEventListener('DOMContentLoaded', function() {
+//     const navLinks = document.querySelectorAll('.nav-links a, .left-nav a');
+//     navLinks.forEach(link => {
+//         link.addEventListener('click', function(e) {
+//             // Check if this is our simulated event
+//             if (e.isTrusted === false) {
+//                 return; // Exit the function to prevent infinite loop
+//             }
 
-            // Prevent the default action
-            e.preventDefault();
+//             // Prevent the default action
+//             e.preventDefault();
             
-            // Log the clicked link (you can remove this if not needed)
-            console.log('Link clicked:', this.textContent);
+//             // Log the clicked link (you can remove this if not needed)
+//             console.log('Link clicked:', this.textContent);
             
-            // Trigger VWO tracking without causing a loop
-            const customEvent = new CustomEvent('vwoLinkClick', {
-                bubbles: true,
-                cancelable: true,
-                detail: { href: this.getAttribute('href') }
-            });
-            this.dispatchEvent(customEvent);
+//             // Trigger VWO tracking without causing a loop
+//             const customEvent = new CustomEvent('vwoLinkClick', {
+//                 bubbles: true,
+//                 cancelable: true,
+//                 detail: { href: this.getAttribute('href') }
+//             });
+//             this.dispatchEvent(customEvent);
 
-            // You can add any additional desired behavior here
-        });
-    });
-});
+//             // You can add any additional desired behavior here
+//         });
+//     });
+// });
 function loadBannerImage(id = 1) {
     const imageUrl = `https://picsum.photos/id/${id}/600/200`;
 
