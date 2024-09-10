@@ -75,14 +75,28 @@
 // loadPage('home');
 
 // Function to fetch and display the image
-// Add this new script to prevent default behavior on nav links
-document.addEventListener('DOMContentLoaded', function() {
+  // Updated script to allow VWO tracking while preventing page reloads
+  document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links a, .left-nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            // Prevent the default action
             e.preventDefault();
+            
+            // Log the clicked link (you can remove this if not needed)
             console.log('Link clicked:', this.textContent);
-            // You can add any desired behavior here
+            
+            // Simulate the link click for VWO tracking
+            setTimeout(() => {
+                const clickEvent = new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                this.dispatchEvent(clickEvent);
+            }, 0);
+
+            // You can add any additional desired behavior here
         });
     });
 });
